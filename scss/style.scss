@@ -1,9 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
-
+$primary: #3c8dbc;
+$secondary: #222d32;
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
 body {
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    background-color: #ecf0f5;
+}
+h1,
+h3,
+h4 {
+    margin: 0;
 }
 @mixin icon($font-size, $color) {
     font-size: $font-size;
@@ -28,9 +38,7 @@ body {
     display: flex;
     height: 70px;
     font-size: 30px;
-    background-color: #367fa9 !important;
-
-    padding: 0 !important;
+    background-color: #367fa9;
     @media (min-width: 790px) {
         display: none;
     }
@@ -38,11 +46,10 @@ body {
 .navbar {
     display: flex;
     height: 70px;
-    background-color: #3c8dbc;
+    background-color: $primary;
     align-items: center;
     color: white;
     padding-right: 20px;
-    max-width: 1000vh;
     .flex-container {
         display: flex;
         align-items: center;
@@ -52,7 +59,7 @@ body {
         transition: 0.3s;
     }
     .logo-container {
-        width: 250px;
+        width: 290px;
         display: flex;
         flex-shrink: 0;
         justify-content: center;
@@ -72,12 +79,8 @@ body {
         font-weight: 100;
     }
     .nav-btn {
-        border-bottom: 13px double white;
-        border-top: 3px solid white;
-        content: "";
-        height: 5px;
-        width: 30px;
         margin: 20px;
+        font-size: 30px;
     }
     .icon-container {
         text-align: end;
@@ -89,10 +92,11 @@ body {
 .aside {
     display: flex;
     position: fixed;
+    z-index: 99999;
     top: 70px;
     flex-direction: column;
     width: 290px;
-    background-color: #222d32;
+    background-color: $secondary;
     height: 100vh;
     color: white;
 
@@ -130,19 +134,47 @@ body {
         cursor: pointer;
         transition: 0.3s;
         &:hover {
-            background-color: #3c8dbc;
+            background-color: $primary;
         }
     }
+}
+.profile-container {
+    display: flex;
+    h2{
+        margin: 10px 10px;
+    }
+    @media (max-width: 960px){
+        flex-direction: column;
+    }
+    .profile-txt {
+        display: flex;
+        width: 95%;
+        margin: 0 12px;
+        align-items: center;
+        justify-content: end;
+        @media(max-width: 960px){
+            justify-content: start;
+            background-color: #D2D6DE;
+        }
+        div{
+            display: inline-block;
+        }
+        p{
+            margin: 0;
+        }
+    }
+    
 }
 .fixed-container {
     top: 0;
     position: fixed;
+    z-index: 99999;
     width: 100%;
 }
 .container {
-    font-size: 40px;
     margin-left: 300px;
     margin-top: 70px;
+    max-width: 1580px;
 }
 @media (max-width: 790px) {
     .nav-icon {
@@ -168,4 +200,72 @@ body {
     .container {
         margin-left: 0;
     }
+}
+
+.row {
+    display: flex;
+    max-width: 100%;
+    @media (max-width: 960px) {
+        flex-direction: column;
+    }
+    .col {
+        width: 50%;
+        margin: 10px;
+        @media (max-width: 960px) {
+            width: 95%;
+            margin: 10px auto;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid lightgrey;
+            border-top: 2px solid lightgrey;
+            width: 100%;
+            background-color: white;
+            .form-header {
+                font-weight: normal;
+            }
+            &-container {
+                padding: 10px 10px;
+                .form-inp {
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid lightgrey;
+                    font-size: 18px;
+                }
+            }
+            &-btn {
+                max-width: 200px;
+                padding: 10px 10px;
+                text-align: center;
+                color: white;
+                background-color: $primary;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: 0.3s;
+                &:hover {
+                    background-color: $secondary;
+                }
+            }
+            .inp-icon {
+                position: absolute;
+                top: calc(50% - 17px);
+                right: 5px;
+                cursor: pointer;
+            }
+            .inp-container {
+                position: relative;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+i{
+    margin: 10px;
+}
+hr {
+    width: 100%;
+    border: 0.5px solid lightgray;
+    background-color: lightgray;
 }
