@@ -297,15 +297,16 @@ hr {
 
 footer {
     background-color: #fff;
-    height: 50px;
+    min-height: 50px;
     position: relative;
     bottom: 0;
-    line-height: 50px;
     .footer-txt-container {
         display: flex;
+        align-items: center;
         margin-left: 300px;
         justify-content: space-between;
         padding: 0 20px;
+        line-height: 50px;
     }
     a {
         text-decoration: none;
@@ -316,5 +317,17 @@ footer {
     }
     &-txt {
         color: black;
+    }
+}
+@media (max-width: 760px) {
+    footer {
+        .footer-txt-container {
+            margin-left: 250px;
+            flex-direction: column;
+            line-height: 30px;
+            @media (max-width: 600px) {
+                margin: 0;  
+            }
+        }
     }
 }
