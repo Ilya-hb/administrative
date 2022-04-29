@@ -6,9 +6,46 @@ $secondary: #222d32;
     font-family: "Roboto", sans-serif;
 }
 body {
-    margin: 0;
     padding: 0;
+    margin: 0;
     background-color: #ecf0f5;
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav article"
+        "footer footer";
+    grid-template-rows: 70px 1fr 50px;
+    grid-template-columns: 290px 1fr;
+    height: 100vh;
+
+    @media(max-width: 790px){
+        grid-template-rows: 140px 1fr 50px;
+        grid-template-columns: 250px 1fr;
+    }
+    @media(max-width: 760px){
+        grid-template-rows: 140px 1fr 60px;
+    }
+    @media(max-width: 600px){
+        grid-template-areas:
+        "header"
+        "article"
+        "footer";
+        grid-template-columns: 1fr;
+
+    }
+
+    #pageHeader {
+        grid-area: header;
+    }
+    #pageFooter {
+        grid-area: footer;
+    }
+    #pageArticle {
+        grid-area: article;
+    }
+    #pageNav {
+        grid-area: nav;
+    }
 }
 h1,
 h3,
@@ -196,10 +233,7 @@ h4 {
     width: 100%;
 }
 .container {
-    margin-left: 300px;
-    margin-top: 70px;
     max-width: 1580px;
-    min-height: calc(100vh - 120px);
 }
 @media (max-width: 790px) {
     .nav-icon {
@@ -213,17 +247,10 @@ h4 {
         width: 250px;
         top: 140px;
     }
-    .container {
-        margin-left: 250px;
-        margin-top: 140px;
-    }
 }
 @media (max-width: 600px) {
     .aside {
         display: none;
-    }
-    .container {
-        margin-left: 0;
     }
 }
 
@@ -326,7 +353,7 @@ footer {
             flex-direction: column;
             line-height: 30px;
             @media (max-width: 600px) {
-                margin: 0;  
+                margin: 0;
             }
         }
     }
