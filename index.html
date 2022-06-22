@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrative</title>
+    <script src="https://kit.fontawesome.com/15aac39de8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="scss/style.min.css">
+    <link rel="stylesheet" href="scss/dropdown.css">
+
+</head>
+
+<body>
+    <div class="fixed-container" id="pageHeader">
+        <div class="logo-container-top">
+            <span class="navbar-logo"><b>Innovations</b>ADM</span>
+        </div>
+        <div class="navbar">
+            <div class="logo-container">
+                <span class="navbar-logo"><b>Innovations</b>ADM</span>
+            </div>
+
+            <div class="navicon-container">
+                <i class="fa-solid fa-align-justify nav-btn"></i>
+            </div>
+
+            <div class="flex-container">
+                <div class="icon-container">
+                 
+                    <i class="fa-regular fa-comment-dots nav-icon">
+                        <div class="badge">
+                            <div class="badge-num">1</div>
+                        </div>
+                    </i>
+                    <i class="fa-brands fa-creative-commons-pd-alt nav-icon">
+                        <div class="badge-y">
+                            <div class="badge-num">4</div>
+                        </div>
+                    </i>
+                    <i class="fa-solid fa-book-bookmark nav-icon">
+                        <div class="badge-r">
+                            <div class="badge-num">6</div>
+                        </div>
+                    </i>
+                </div>
+                <i class="fa-solid fa-circle-user nav-icon"></i>
+                <span>Administrator</span>
+            </div>
+        </div>
+    </div>
+
+    <aside class="aside" id="pageNav">
+        <div class="aside-avatar">
+            <i class="fa-solid fa-circle-user avatar"></i>
+            <span class="aside-txt"><b>Administrator</b><br><i class="fa-solid fa-circle"></i> Online</span>
+
+        </div>
+        <div class="aside-nav">
+            <p class="nav-txt">Main navigation</p>
+        </div>
+        <div class="aside-item">
+            <div class="items">
+                <i class="fa-solid fa-user aside-icon"></i>
+                <p>Admins</p>
+            </div>
+            <span class="arrow">
+                &lt;</span>
+        </div>
+        <div class="aside-item">
+            <div class="items">
+                <i class="fa-solid fa-users aside-icon"></i>
+                <p>Users</p>
+            </div>
+            <span class="arrow">
+                &lt;</span>
+        </div>
+        <div class="aside-item">
+            <div class="items">
+                <i class="fa-regular fa-address-card aside-icon"></i>
+                <p>Cards</p>
+            </div>
+            <span class="arrow">
+                &lt;</span>
+        </div>
+        <div class="aside-item">
+            <div class="items">
+                <i class="fa-solid fa-sitemap aside-icon"></i>
+                <p>Categories</p>
+            </div>
+            <span class="arrow">
+                &lt;</span>
+        </div>
+
+    </aside>
+
+    <div class="container" id="pageArticle">
+        <div class="profile-container">
+            <h2 class="prof-header">Profile</h2>
+
+            <div class="profile-txt">
+                <div><i class="fa-solid fa-user"></i></div>
+                <div>
+                    <p>Admins > Profile</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <!-- 1 -->
+            <div class="col">
+                <form action="#" class="form">
+                    <div class="form-container">
+                        <h3 class="form-header">Edit Username</h3>
+                    </div>
+
+
+                    <div class="form-container">
+                        <label for="new-username"><b>New username</b></label>
+                        <div class="inp-container"> <input type="text" placeholder="Username" id="new-username"
+                                name="new-username" class="form-inp">
+                            <i class="fa-solid fa-ellipsis inp-icon"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="form-container">
+                        <label for="password1"><b>Password</b></label>
+                        <div class="inp-container"><input type="password" placeholder="Password" id="password1"
+                                name="password1" class="form-inp">
+                            <i class="fa-solid fa-ellipsis inp-icon"></i>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-container">
+                        <button type="submit" class="form-btn">Submit</button>
+                    </div>
+
+                </form>
+            </div>
+            <!-- 2 -->
+            <div class="col">
+                <form action="#" class="form">
+                    <div class="form-container">
+                        <h3 class="form-header">Edit Email</h3>
+                    </div>
+
+
+                    <div class="form-container">
+                        <label for="new-email"><b>New Email</b></label>
+                        <div class="inp-container"><input type="email" placeholder="Email" id="new-email"
+                                name="new-email" class="form-inp">
+                        </div>
+
+                    </div>
+
+                    <div class="form-container">
+                        <label for="password2"><b>Password</b></label>
+                        <div class="inp-container">
+                            <input type="password" placeholder="Password" id="password2" name="password2"
+                                class="form-inp">
+                            <i class="fa-solid fa-arrow-rotate-left inp-icon"></i>
+                        </div>
+
+
+                    </div>
+                    <hr>
+                    <div class="form-container">
+                        <button type="submit" class="form-btn">Submit</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <!-- 3 -->
+        <div class="row">
+            <div class="col">
+                <form action="#" class="form">
+                    <div class="form-container">
+                        <h3 class="form-header">Edit Password</h3>
+                    </div>
+
+
+                    <div class="form-container">
+                        <label for="old-password"><b>Old password</b></label>
+                        <div class="inp-container"><input type="password" placeholder="Password" id="old-password"
+                                name="old-password" class="form-inp">
+                            <i class="fa-solid fa-ellipsis inp-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-container">
+                        <label for="new-password"><b>New password</b></label>
+                        <div class="inp-container"> <input type="password" placeholder="Password" id="new-password"
+                                name="new-password" class="form-inp">
+                            <i class="fa-solid fa-arrow-rotate-left inp-icon"></i>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="form-container">
+                        <label for="conf-password"><b>Confirm password</b></label>
+                        <div class="inp-container"><input type="password" placeholder="Password" id="conf-password"
+                                name="conf-password" class="form-inp">
+                            <i class="fa-solid fa-arrow-rotate-left inp-icon"></i>
+                        </div>
+
+                    </div>
+                    <hr>
+                    <div class="form-container">
+                        <button type="submit" class="form-btn">Submit</button>
+                    </div>
+
+
+
+                </form>
+            </div>
+            <div class="col">
+                <form action="#" class="form">
+                    <div class="form-container">
+                        <h3 class="form-header">Edit Image</h3>
+                    </div>
+                    <div class="form-container"><button class="form-btn">Please open the image</button></div>
+
+                    <hr>
+                    <div class="form-container"><button type="submit" class="form-btn">Submit</button></div>
+
+                </form>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <footer id="pageFooter">
+        <div class="footer-txt-container">
+            <span class="footer-txt"><b>Develop by <a href="#">OnCreate Studio</a> 2015.</b></span>
+            <span class="footer-txt"><b>Version</b> 1.0</span>
+        </div>
+
+    </footer>
+</body>
+
+</html>
